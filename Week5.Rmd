@@ -21,7 +21,10 @@ library(ggplot2)
 #View(HappyPlanetIndex)
 #help("HappyPlanetIndex")
 ```
-To show the first few rows of the data
+To show the first few rows of the data. It is useful to know whether a variable is categorical or quantitative.
+Country is a factor varaible belongs to cetegorical variable.
+Region seems integer (int means integer) but actually it is categorical we can see this from help().
+Happiness is quantitative variable. (dbl means double is a precision decimal format)
 ```{r}
 head(HappyPlanetIndex)
 HappyPlanetIndex %>%
@@ -53,4 +56,25 @@ VoteResults <-
 head(VoteResults)
 ```
 
-Plot bar plots. h
+Plot bar plots (bar is glyph)
+```{r}
+ggplot(data = VoteResults, aes(x = reorder(First,desc(votes)), y = votes))
+```
+
+```{r}
+ggplot(data = VoteResults, aes(x = reorder(First,desc(votes)), y = votes))+
+  geom_bar(stat = 'identity')
+```
+
+```{r}
+ggplot(data = VoteResults, aes(x = reorder(First,desc(votes)), y = votes))+
+  geom_bar(stat = 'identity')
+```
+
+```{r}
+ggplot(data = VoteResults, aes(x = reorder(First,desc(votes)), y = votes))+
+  geom_bar(stat = 'identity')+
+  theme(axis.text.x = element_text(angle = 60, hjust = 1))+
+  ylab("Votes") +
+  xlab("Candidate")
+```
