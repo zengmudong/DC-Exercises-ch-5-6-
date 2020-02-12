@@ -21,8 +21,36 @@ library(ggplot2)
 #View(HappyPlanetIndex)
 #help("HappyPlanetIndex")
 ```
-
+To show the first few rows of the data
 ```{r}
 head(HappyPlanetIndex)
+HappyPlanetIndex %>%
+  head()
+```
+To show the last few rows of the data
+
+```{r}
+tail(HappyPlanetIndex)
 ```
 
+Note you have to use these command to familiar with data first, and then think about plots to visualize the data. This process is called Exploratory Data Analysis (EDA).
+
+### Minneapolis2013
+```{r}
+library(DataComputing)
+head(Minneapolis2013)
+```
+
+# Data Wrangling
+## Bar plot
+Aggregate the vote result for each candidate
+```{r}
+VoteResults <- 
+  Minneapolis2013 %>%
+  group_by(First) %>%
+  summarise(votes = n())
+
+head(VoteResults)
+```
+
+Plot bar plots. h
