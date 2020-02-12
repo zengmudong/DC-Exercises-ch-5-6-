@@ -1,0 +1,28 @@
+---
+title: "Week5 Data Wrangling Demo"
+author: "Mudong"
+date: "February 11, 2020"
+output: html_document
+---
+
+# Load data
+```{r}
+#install.packages("Lock5Data")
+library(Lock5Data)
+library(tidyverse)
+library(ggplot2)
+```
+
+## data(), View(), help()
+### HappyPlanetIndex
+
+```{r}
+# Should not write these command at code chunk, they should in console because they will take times to knit
+#View(HappyPlanetIndex)
+#help("HappyPlanetIndex")
+```
+
+```{r}
+head(HappyPlanetIndex)
+```
+
