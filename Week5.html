@@ -206,7 +206,7 @@ library(tidyverse)</code></pre>
 <pre class="r"><code># Should not write these command at code chunk, they should in console because they will take times to knit
 #View(HappyPlanetIndex)
 #help(&quot;HappyPlanetIndex&quot;)</code></pre>
-<p>To show the first few rows of the data</p>
+<p>To show the first few rows of the data. It is useful to know whether a variable is categorical or quantitative. Country is a factor varaible belongs to cetegorical variable. Region seems integer (int means integer) but actually it is categorical we can see this from help(). Happiness is quantitative variable. (dbl means double is a precision decimal format)</p>
 <pre class="r"><code>head(HappyPlanetIndex)</code></pre>
 <pre><code>##     Country Region Happiness LifeExpectancy Footprint  HLY   HPI HPIRank
 ## 1   Albania      7       5.5           76.2       2.2 41.7 47.91      54
